@@ -1,6 +1,6 @@
 CC=gcc
 AR=ar
-FLAGS= -Wall
+FLAGS= -Wall -g
 OBJECTS_LIB_BASIC_LOOP=basicClassification.o advancedClassificationLoop.o
 OBJECTS_LIB_BASIC_REC= basicClassification.o advancedClassificationRecursion.o
 OBJECTS_MAIN=main.o
