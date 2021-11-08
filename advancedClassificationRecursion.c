@@ -10,7 +10,7 @@
 // int isArmstorng(int num);
 
 
-//============================ THIS IS FOR ARMSTORNG & PALINDROEM ===============================
+//=========================== THIS IS FOR ARMSTORNG & PALINDROEM ===============================
     int numReverse(int num, int reverse){
         if (num == 0) {
             return reverse;

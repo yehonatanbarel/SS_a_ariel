@@ -8,7 +8,7 @@
 #define true 1
 #define false 0
 
-//============================ THIS IS FOR ARMSTORNG & PALINDROEM ===============================
+//=========================== THIS IS FOR ARMSTORNG & PALINDROEM ===============================
 
 int ownPow(int x,int y){
     int number = 1;

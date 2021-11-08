@@ -3,7 +3,7 @@
 #include "NumClass.h"
 // int isPrime(int num);
 // int factorial(int num);
-// int isStrong(int num);
+/// int isStrong(int num);
 
 #define true 1
 #define false 0

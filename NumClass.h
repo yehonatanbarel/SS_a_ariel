@@ -9,5 +9,5 @@ int isPrime(int);
 
 int isStrong(int);
 
-
+//
 #endif

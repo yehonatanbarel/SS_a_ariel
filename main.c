@@ -7,7 +7,7 @@ int x;
 int y;
 //printf("Enter 2 numbers:\n");
 scanf("%d%d",&x,&y);
-//scanf("%d",&y);
+///scanf("%d",&y);
 int i = x;
 
 //============ IS ARMSTRONG =====================
