@@ -1,98 +1,58 @@
-// #include <math.h>
 #include <stdio.h>
+#include <math.h>
 #include "NumClass.h"
-#define true 1
-#define false 0
-// int numReverse(int num, int reverse);
-//int isPalindrome(int num);
-// int ownPow(int x,int y);
-// int isArmstorngRec(int num, int power);
-// int isArmstorng(int num);
 
-
-//=========================== THIS IS FOR ARMSTORNG & PALINDROEM ===============================
-    int numReverse(int num, int reverse){
-        if (num == 0) {
-            return reverse;
-        }
-
-        reverse = reverse * 10 + (num % 10);
-        reverse = numReverse(num / 10, reverse);
-        return reverse;
+int isArmstrong2(int a,int len){
+    int i,t;
+    if (a!=0){
+    t=1;
+    i=0;
+    while(i<len){
+        t*=(a%10);
+        i++;
     }
-
-    int isPalindrome(int num){
-        int reverse = 0;
-        reverse = numReverse(num, reverse);
-        return (num == reverse);
+    return ( t+ isArmstrong2(a*0.1,len));
     }
-//==========================================================
-int ownPow(int x, int y){
-    int res = 1;
-    int neg = 0;
-    if(y<0) {
-        neg = 1;
-        y=-y;
-    }
-    while (y > 0){
-        res *= x;
-        y--;
-    }
-    if(neg)
-        res = 1/res;
-    return res;
-}
-int ownPow2(int x,int y)
-{
-    int number = 1;
-    for (int i = 0; i < y; ++i){
-        number *= x;
-    }
-    return number;
-}
-//==========================================================
-
-
-// from this func we get the power
-int numPow(int num){
-    int power = 0;
-    int temp = num;
-    // this is for the finding out the power
-    while(temp>0){
-        temp= temp / 10;
-        power++;
-    }
-    return power;
+    return 0;
 }
 
-int isArmstorngRec(int num, int power){
-        int digit = 0;
-        int sum = 0;
-        int totalSum = 0;
-        if(num > 0){
-        digit = num % 10;
-        sum += (int) (ownPow(digit,power) + isArmstorngRec(num / 10, power));
-        }
-        totalSum = sum;
-        return totalSum;
-}
-int isArmstorng(int num){
-    int power = numPow(num);
-    if(isArmstorngRec(num,power) == num){
+int isArmstrong(int a){
+    int temp ,leng=0;
+    temp=a;
+    while (temp > 0) {
+        leng++;
+        temp = temp/ 10;
+    }
+    int f=isArmstrong2(a,leng);
+    if (f==a){
         return 1;
     }
     return 0;
 }
 
-// void main(){
-//     int a;
-//     printf("Enter a number: ");
-//     scanf("%d", &a);
-//     printf("%d",Power(a,2));
-//     if(isPalindrome(a)==1){
-//         printf("True");
-//     }
-//     else{
-//         printf("False");
-//     }
-// }
+int isPalindrome(int a)
+{
+    int opp =rev(a);
+    if(a != opp)
+    {
+        return 0;
+    }
+    return 1;
+}
+
+int rev(int a)
+{   
+    int len=-1;
+    int temp=a;
+    while(temp!=0){
+    temp=temp/10;
+    len++;
+    }
+    if(a != 0){
+    int r=a%10;
+    return (rev(a*0.1)+ r*pow(10,len));
+    }
+    else{
+        return 0;
+    }
+}
