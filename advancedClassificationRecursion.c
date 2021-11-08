@@ -79,9 +79,9 @@ int isArmstorngRec(int num, int power){
 int isArmstorng(int num){
     int power = numPow(num);
     if(isArmstorngRec(num,power) == num){
-        return true;
+        return 1;
     }
-    return false;
+    return 0;
 }
 
 // void main(){

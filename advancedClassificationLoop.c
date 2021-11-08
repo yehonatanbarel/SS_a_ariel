@@ -42,9 +42,9 @@ int isArmstorng(int num){
     // check if the sum we get is the num in the input
     // (check if it's an armstrong number)
     if(num == sum){
-        return true;
+        return 1;
     }
-    return false;
+    return 0;
 }
 
 int isPalindrome(int num){
@@ -76,9 +76,9 @@ int isPalindrome(int num){
         }
     }
     if( numOfTimeNeedToBeTrue == (len / 2 ) ){
-        return true; 
+        return 1; 
     } 
-    return false;
+    return 0;
 }
 
 

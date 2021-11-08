@@ -20,10 +20,10 @@ int isPrime(int num){
   }
   for (i = 2; i <= num / 2; ++i) {
     if (num % i == 0) {
-      return false;
+      return 0;
     }
   }
-  return true;
+  return 1;
 }
 
   //=====================================
@@ -45,9 +45,9 @@ int isStrong(int num){
         temp = temp / 10;
     }
     if(num == sum){
-        return true;
+        return 1;
     }
-    return false;
+    return 0;
 }
 // void main(){
 //     int a;
