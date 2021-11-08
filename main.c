@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "NumClass.h"
-#include "advancedClassificationRecursion.c"
-#include "basicClassification.c"
-//#include "advancedClassificationLoop.c"
+// #include "advancedClassificationRecursion.c"
+// #include "basicClassification.c"
+// //#include "advancedClassificationLoop.c"
 
 
 
