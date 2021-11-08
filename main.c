@@ -1,10 +1,5 @@
 #include <stdio.h>
 #include "NumClass.h"
-// #include "advancedClassificationRecursion.c"
-// #include "basicClassification.c"
-// //#include "advancedClassificationLoop.c"
-
-
 
 int main(){
 // enter 2 num
