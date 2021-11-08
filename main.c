@@ -20,7 +20,7 @@ int i = x;
 printf("The Armstrong numbers are:");
 for(i = x; i <= y; i++){
     if(isArmstorng(i)){
-        printf("%d ",i);
+        printf(" %d",i);
     }
 }
 //
@@ -30,7 +30,7 @@ for(i = x; i <= y; i++){
 printf("\nThe Palindromes are:");
 for(i = x; i <= y; i++){
     if(isPalindrome(i)){
-        printf("%d ",i);
+        printf(" %d",i);
     }
 }
 //============== IS PRIME ================
@@ -38,7 +38,7 @@ for(i = x; i <= y; i++){
 printf("\nThe Prime numbers are:");
 for(i = x; i <= y; i++){
     if(isPrime(i)){
-        printf("%d ",i);
+        printf(" %d",i);
     }
 }
 
@@ -47,7 +47,7 @@ for(i = x; i <= y; i++){
 printf("\nThe Strong numbers are:");
 for(i = x; i <= y; i++){
     if(isStrong(i)){
-        printf("%d ",i);
+        printf(" %d",i);
     }
 }
 
