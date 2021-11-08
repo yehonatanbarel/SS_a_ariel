@@ -3,11 +3,11 @@
 #include "NumClass.h"
 #define true 1
 #define false 0
-int numReverse(int num, int reverse);
-int isPalindrome(int num);
-int ownPow(int x,int y);
-int isArmstorngRec(int num, int power);
-int isArmstorng(int num);
+// int numReverse(int num, int reverse);
+//int isPalindrome(int num);
+// int ownPow(int x,int y);
+// int isArmstorngRec(int num, int power);
+// int isArmstorng(int num);
 
 
 //============================ THIS IS FOR ARMSTORNG & PALINDROEM ===============================

@@ -1,9 +1,9 @@
 // #include <math.h>
 #include <stdio.h>
 #include "NumClass.h"
-int ownPow(int x,int y);
-int isArmstorng(int num);
-int isPalindrome(int num);
+// int ownPow(int x,int y);
+// int isArmstorng(int num);
+// int isPalindrome(int num);
 
 #define true 1
 #define false 0
