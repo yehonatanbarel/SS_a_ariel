@@ -1,53 +1,51 @@
 #include <stdio.h>
+#include <math.h>
 #include "NumClass.h"
-
 int main(){
-// enter 2 num
-int x;
-int y;
-//printf("Enter 2 numbers:\n");
-scanf("%d%d",&x,&y);
-///scanf("%d",&y);
-int i = x;
-
-//============ IS ARMSTRONG =====================
-
+int a=0,b=0 ,i=0,temp=0;
+scanf("%d" ,&a );
+scanf("%d" ,&b );
+while((a<=0) || (b<=0)) {
+scanf("%d" ,&a );
+scanf("%d" ,&b );
+}
+if(a>b){
+	temp=b;
+	b=a;
+	a=temp;
+}
 printf("The Armstrong numbers are:");
-for(i = x; i <= y; i++){
-    if(isArmstorng(i)){
-        printf(" %d",i);
-    }
+for(i=a;i<b;i++){
+	if(isArmstrong(i)==1){
+		printf(" %d",i);
+	}
 }
-//
+    printf("\n");
 
-//=============== IS PALINDROME =====================
 
-printf("\nThe Palindromes are:");
-for(i = x; i <= y; i++){
-    if(isPalindrome(i)){
-        printf(" %d",i);
-    }
+printf("The Palindromes are:");
+for(i=a;i<b;i++){
+	if(isPalindrome(i)==1){
+		printf(" %d",i);
+	}
 }
-//============== IS PRIME ================
+    printf("\n");
 
-printf("\nThe Prime numbers are:");
-for(i = x; i <= y; i++){
-    if(isPrime(i)){
-        printf(" %d",i);
-    }
+printf("The Prime numbers are:");
+for(i=a;i<b;i++){
+	if(isPrime(i)==1){
+		printf(" %d",i);
+	}
 }
+    printf("\n");
 
-//============= IS STRONG ==================
-
-printf("\nThe Strong numbers are:");
-for(i = x; i <= y; i++){
-    if(isStrong(i)){
-        printf(" %d",i);
-    }
+printf("The Strong numbers are:");
+for(i=a;i<b;i++){
+	if(isStrong(i)==1){
+		printf(" %d",i);
+	}
 }
-
-//====================================
-printf("\n\n");
+    printf("\n");
 
 return 0;
 }
