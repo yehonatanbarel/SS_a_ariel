@@ -1,16 +1,27 @@
-// #include <math.h>
+#include <math.h>
 #include <stdio.h>
 #include "NumClass.h"
-// int ownPow(int x,int y);
-// int isArmstorng(int num);
-// int isPalindrome(int num);
 
 #define true 1
 #define false 0
 
-//=========================== THIS IS FOR ARMSTORNG & PALINDROEM ===============================
-
-int ownPow(int x,int y){
+//========================== THIS IS FOR ARMSTORNG & PALINDROEM ===============================
+int ownPow(int x, int y){
+    int res = 1;
+    int neg = 0;
+    if(y<0) {
+        neg = 1;
+        y=-y;
+    }
+    while (y > 0){
+        res *= x;
+        y--;
+    }
+    if(neg)
+        res = 1/res;
+    return res;
+}
+int ownPow2(int x,int y){
     int number = 1;
     for (int i = 0; i < y; ++i){
         number *= x;
@@ -36,7 +47,10 @@ int isArmstorng(int num){
     int digit;
     while(temp>0){
         digit = temp % 10;
-        sum += ownPow(digit,power);
+       
+        //sum += ownPow(digit,power);
+        sum += pow(digit,power);
+       
         temp = temp / 10;
     }
     // check if the sum we get is the num in the input

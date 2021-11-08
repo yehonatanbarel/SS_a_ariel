@@ -1,14 +1,12 @@
-// #include <math.h>
+#include <math.h>
 #include <stdio.h>
 #include "NumClass.h"
-// int isPrime(int num);
-// int factorial(int num);
-/// int isStrong(int num);
+
 
 #define true 1
 #define false 0
 
-// ================ in this file the func are: isPrime & isStrong =================
+// =============== in this file the func are: isPrime & isStrong =================
 
 
 int isPrime(int num){
@@ -18,7 +16,7 @@ int isPrime(int num){
   if(num ==1){
       return true;
   }
-  for (i = 2; i <= num / 2; ++i) {
+  for (i = 2; i <= sqrt(num); ++i) {
     if (num % i == 0) {
       return 0;
     }

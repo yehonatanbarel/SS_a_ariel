@@ -1,13 +1,8 @@
-// #include <math.h>
+#include <math.h>
 #include <stdio.h>
 #include "NumClass.h"
 #define true 1
 #define false 0
-// int numReverse(int num, int reverse);
-//int isPalindrome(int num);
-// int ownPow(int x,int y);
-// int isArmstorngRec(int num, int power);
-// int isArmstorng(int num);
 
 
 //=========================== THIS IS FOR ARMSTORNG & PALINDROEM ===============================
@@ -71,7 +66,10 @@ int isArmstorngRec(int num, int power){
         int totalSum = 0;
         if(num > 0){
         digit = num % 10;
-        sum += (int) (ownPow(digit,power) + isArmstorngRec(num / 10, power));
+
+        //sum += (int) (ownPow(digit,power) + isArmstorngRec(num / 10, power));
+        sum += (int) (pow(digit,power) + isArmstorngRec(num / 10, power));
+        
         }
         totalSum = sum;
         return totalSum;

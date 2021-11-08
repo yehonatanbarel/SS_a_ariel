@@ -23,13 +23,13 @@ loopd: libclassloops.so
 
 # 5	
 mains: $(OBJECTS_MAIN) libclassrec.a
-	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a
+	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a -lm
 # 6
 maindloop: $(OBJECTS_MAIN) libclassloops.so
-	$(CC) $(FLAGS) -o maindloop $(OBJECTS_MAIN) ./libclassloops.so
+	$(CC) $(FLAGS) -o maindloop $(OBJECTS_MAIN) ./libclassloops.so -lm
 # 7
 maindrec: $(OBJECTS_MAIN) libclassrec.so
-	$(CC) $(FLAGS) -o maindrec $(OBJECTS_MAIN) ./libclassrec.so
+	$(CC) $(FLAGS) -o maindrec $(OBJECTS_MAIN) ./libclassrec.so -lm
 # 1
 libclassloops.a: $(OBJECTS_LIB_BASIC_LOOP)
 	$(AR) -rcs libclassloops.a $(OBJECTS_LIB_BASIC_LOOP) 
@@ -57,7 +57,7 @@ advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
 
 main.o: main.c NumClass.h
 	$(CC) $(FLAGS) -c main.c
-# 9
+## 9
 clean:
 	rm -f *.o *.a *.so mains maindloop maindrec
 

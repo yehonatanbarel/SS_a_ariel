@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #include "NumClass.h"
 
 int main(){
@@ -7,7 +8,6 @@ int x;
 int y;
 //printf("Enter 2 numbers:\n");
 scanf("%d%d",&x,&y);
-///scanf("%d",&y);
 int i = x;
 
 //============ IS ARMSTRONG =====================
@@ -20,7 +20,7 @@ for(i = x; i <= y; i++){
 }
 //
 
-//=============== IS PALINDROME =====================
+//=============== IS PALINDROME ====================
 
 printf("\nThe Palindromes are:");
 for(i = x; i <= y; i++){
