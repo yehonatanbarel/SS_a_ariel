@@ -59,6 +59,6 @@ main.o: main.c NumClass.h
 	$(CC) $(FLAGS) -c main.c
 # 9
 clean:
-	rm -f *.o *.a *.so maindloop mains maindrec
+	rm -f *.o *.a *.so loops recursived loopd mains maindloop maindrec
 
 .PHONY: clean all
